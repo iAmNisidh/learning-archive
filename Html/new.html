@@ -1,0 +1,224 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Platform</title>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        .header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 1rem;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .category-filter {
+            background-color: white;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .video-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .videothumbnail {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .videodetails {
+            padding: 1rem;
+        }
+
+        .view-button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        /* Modal CSS */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.8);
+        }
+
+        .modal-content {
+            position: relative;
+            background-color: white;
+            margin: 5% auto;
+            padding: 2rem;
+            width: 90%;
+            max-width: 1000px;
+            border-radius: 8px;
+        }
+
+        .close {
+            position: absolute;
+            right: 1rem;
+            top: 1rem;
+            font-size: 2rem;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">VideoPlatform</div>
+            <div class="category-filter">
+                <h3>All Videos</h3>
+                <button class="btn btn-primary" onclick="showUploadModal()">Upload Video</button>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <!-- Categories -->
+        <div class="category-filter">
+            <ul style="list-style: none; display: flex; gap: 1rem; padding-top: 1rem;">
+                <li><a href="#" class="active">All</a></li>
+                <li><a href="#">Technology</a></li>
+                <li><a href="#">Entertainment</a></li>
+                <li><a href="#">Sports</a></li>
+            </ul>
+        </div>
+
+        <!-- Video Grid -->
+        <div class="video-grid">
+            <div class="video-card" onclick="openVideoModal(1)">
+                <img src="https://picsum.photos/300/200" alt="Video Thumbnail" class="videothumbnail">
+                <div class="videodetails">
+                    <h4>Amazing Video Title</h4>
+                    <p>By John Doe | 100k views | 2 days ago</p>
+                </div>
+                <button class="view-button">Watch Now</button>
+            </div>
+
+            <!-- Add more video cards dynamically -->
+        </div>
+    </main>
+
+    <!-- Modal for Video Player -->
+    <div id="videoModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeVideoModal()">&times;</span>
+            <video controls style="width: 100%; height: 400px;">
+                <source src="your-video-source.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function showUploadModal() {
+            // Add upload modal logic here
+            alert('Coming soon!');
+        }
+
+        function openVideoModal(videoId) {
+            document.getElementById('videoModal').style.display = 'block';
+        }
+
+        function closeVideoModal() {
+            document.getElementById('videoModal').style.display = 'none';
+        }
+
+        // Handle clicks on video cards
+        document.querySelectorAll('.video-card').forEach(card => {
+            card.addEventListener('click', () => openVideoModal(card.dataset.videoId));
+        });
+    </script>
+</body>
+</html>
+```
+
+### Backend (Node.js, Express, MongoDB)
+
+```javascript
+const express = require('express');
+const mongoose = require('mongoose');
+const passport = require('passport');
+require('dotenv').config();
+
+// Initialize App
+const app = express();
+
+// Middleware
+app.use(express.json());
+app.use(passport.initialize());
+
+// Database Connection
+mongoose.connect(process.env.MONGODB_URI)
+    .then(() => console.log('Database connected successfully'))
+    .catch(err => console.error('Database connection error:', err));
+
+// Routes
+app.use('/api/videos', require('./routes/videos'));
+app.use('/api/auth', require('./routes/auth'));
+
+// Serve static assets
+if (process.env.NODE_ENV === 'production') {
+    app.use(express.static(__dirname + '/public/build'));
+
+    // Handle React routing, return all requests to React app
+    app.get('*', (req, res) => {
+        res.sendFile(path.join(__dirname + '/public/build', 'index.html'));
+    });
+}
+
+// Start Server
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+```

@@ -1,0 +1,11 @@
+a=input("enter 1st no")
+b=input("enter 2nd no")
+print(int(a) + int(b))
+print(int(a) * int(b))
+print(int(a) ** int(b))
+print(int(a) / int(b))
+print(int(a) - int(b))
+print(int(a) // int(b))
+print(int(a) % int(b))
+z="prem"
+print(z(1))
