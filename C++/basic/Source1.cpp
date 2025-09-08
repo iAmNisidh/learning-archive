@@ -9,7 +9,7 @@ namespace nisidh {
 
 int main() { 
     cout << "this is my first cpp code" << endl;
-    cout << "this is my first cpp code222" << endl;
+    cout << "this is my first cpp code" << endl;
     nisidh::display();
 
     system("pause"); // <- Add this
