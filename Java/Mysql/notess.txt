@@ -1,0 +1,123 @@
+A database is an organized collection of structured information, or
+data, typically stored electronically in a computer system. Databases
+allow for data to be easily accessed, managed, modified, updated, and
+deleted.
+
+Key Characteristics of Databases
+1. Persistent Storage: Data is stored over the long term, surviving application
+restarts and system reboots.
+2. Structured and Organized:
+Data is systematically arranged to avoid duplication
+and inconsistency.
+3. Easily Retrievable: Efficient methods exist for querying, filtering, and retrieving
+stored data quickly.
+4. Concurrent Access: Multiple users and applications can use the database
+simultaneously without corrupting data.
+5. Security and Integrity: Access can be controlled and data can be protected
+against unauthorized use or corruption.
+
+Why Use a Database?
+• To maintain a permanent record of information.
+• To ensure data integrity and reduce redundancy.
+• To efficiently handle large volumes of data and ensure
+fast retrieval.
+• To allow multiple users and applications to access and
+work with the data safely and concurrently.
+• To back up and recover data in case of hardware failures
+or data corruption.
+
+Primary Key: A column or set of columns that uniquely identify each row
+in a table. For instance, employee_id can be a primary key if it uniquely
+identifies every employee.
+Foreign Key: A column in one table that refers to the primary key in
+another table. For example, a department_id in the Employees table that
+references the department_id in a Departments table.
+
+Key Concepts in the Relational Model
+• Tables (Relations): A table represents an entity or a concept. For example,
+Employees, Customers, Products. Each table consists of rows and columns.
+• Columns (Attributes): Columns define the type of data stored. For example,
+in an Employees table, you might have columns like employee_id, first_name,
+last_name, hire_date.AII rows in the same column share the same type and
+meaning of data.
+• Rows (Records): Each row in a table represents a single instance or record.
+For example, one row in the Employees table would represent one specific
+employee.
+• Keys: Primary Key & Foreign Key
+• Relationships Between Tables: 
+
+
+Each row in Table A is related to exactly one row I
+One-to-One (1:1):
+in Table B. For example, one employee might have one unique
+company car assigned.
+One-to-Many (I:N): One row in Table A can be associated with
+multiple rows in Table B. For example, one department can have
+many employees.
+Many-to-Many (M:N): Multiple rows in Table A can be associated
+with multiple rows in Table B. For example, employees can work on
+multiple projects, and projects can have multiple employees.
+
+Main categories of
+SQL commands
+1.DDL (Data Definition Language)
+
+SQL provides commands to define the structure of a
+database, collectively known as Data Definition Language
+(DDL). Some common DDL commands include:
+Used to create databases, tables, indexes, and
+CREATE:
+more.
+Used to modify existing database objects (e.g., add or
+ALTER:
+remove a column from a table).
+Used to delete entire databases, tables, or other
+DROP:
+objects.
+
+2.DML (Data Manipulation Language)
+
+Data Manipulation Language (DML) commands let you insert,
+update, or delete data within the database tables. These
+commands include:
+Retrieves data from one or more tables.
+• SELECT:
+Adds new records into a table.
+INSERT:
+Modifies existing records in a table.
+• UPDATE:
+• DELETE: Removes records from a table.
+
+3.DCL (Data Control Language)
+
+DCL commands are used to control access to data in a
+database.
+• GRANT: Gives a user access privileges to database
+objects.
+Removes access privileges from a user.
+REVOKE:
+
+4. (TCL)Transaction Control Language
+
+TCL commands are used to manage transactions within a
+database, ensuring data integrity and consistency.
+Saves all changes made during the current transaction.
+COMMIT:
+Undoes changes made during the current transaction.
+• ROLLBACK:
+Sets a point within a transaction to which you can roll
+• SAVEPOINT:
+back.
+Configures transaction properties.
+• SET TRANSACTION:
+
+
+Data Type	Storage (Bytes)	Range (Signed) Range (Unsigned)
+TINYINT	1	-128 to 127 O to 255
+SMALLINT	2	-32,768 to 32,767 O to 65,535
+MEDIUMINT	3	-8,388,608 to 8,388,607 O to 16,777,215
+INT/INTEGER	4	-2,147,483,648 to 2,147,483,647 O to 4,294,967,295
+BIGINT	8	-9,223,372,036,854,775,808 to 9,223,372,036,854,775,807 O to 18,446,744,073,709,551,615
+FLOAT(p)	4	-3.402823466E+38 to -1.175494351E-38, O, and 1.175494351+38 to 3.402823466938
+DOUBLE	8	-1.79769313486231579308 to -2.2250738585072014E-308, O, and 2.2250738585072014E-308 to 1.7976931348623157E+308
+	Varies	Defined by precision (p) andSame as signedscale (s)

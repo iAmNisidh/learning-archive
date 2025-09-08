@@ -4,5 +4,10 @@
         "java/afteropps54",
         "java"
     ],
-    "java.debug.settings.onBuildFailureProceed": true
+    "java.debug.settings.onBuildFailureProceed": true,
+    "C_Cpp.errorSquiggles": "disabled",
+    "files.associations": {
+        "*.dbclient-js": "javascript",
+        "iostream": "cpp"
+    }
 }

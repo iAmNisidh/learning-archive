@@ -1,0 +1,16 @@
+we have to do 7 steps to establish connection between frontend and database 
+1. import package (import java.sql.*)
+2. load and register the driver driver for mySql is com.mysql.jdbc 
+2a> load         
+2b> register 
+3. establish connection
+4. create the statement 
+5. execute the query 
+6. process result 
+7. close 
+
+Database Management Systems
+(DBMS)
+It is software that manages databases, handling data
+storage, retrieval, updates, and security. It acts as an
+interface between databases and users/applications

@@ -1,0 +1,14 @@
+D:\language\MyAdvancedCSharp\bin\Debug\net9.0\MyAdvancedCSharp.exe
+D:\language\MyAdvancedCSharp\bin\Debug\net9.0\MyAdvancedCSharp.deps.json
+D:\language\MyAdvancedCSharp\bin\Debug\net9.0\MyAdvancedCSharp.runtimeconfig.json
+D:\language\MyAdvancedCSharp\bin\Debug\net9.0\MyAdvancedCSharp.dll
+D:\language\MyAdvancedCSharp\bin\Debug\net9.0\MyAdvancedCSharp.pdb
+D:\language\MyAdvancedCSharp\obj\Debug\net9.0\MyAdvancedCSharp.GeneratedMSBuildEditorConfig.editorconfig
+D:\language\MyAdvancedCSharp\obj\Debug\net9.0\MyAdvancedCSharp.AssemblyInfoInputs.cache
+D:\language\MyAdvancedCSharp\obj\Debug\net9.0\MyAdvancedCSharp.AssemblyInfo.cs
+D:\language\MyAdvancedCSharp\obj\Debug\net9.0\MyAdvancedCSharp.csproj.CoreCompileInputs.cache
+D:\language\MyAdvancedCSharp\obj\Debug\net9.0\MyAdvancedCSharp.dll
+D:\language\MyAdvancedCSharp\obj\Debug\net9.0\refint\MyAdvancedCSharp.dll
+D:\language\MyAdvancedCSharp\obj\Debug\net9.0\MyAdvancedCSharp.pdb
+D:\language\MyAdvancedCSharp\obj\Debug\net9.0\MyAdvancedCSharp.genruntimeconfig.cache
+D:\language\MyAdvancedCSharp\obj\Debug\net9.0\ref\MyAdvancedCSharp.dll

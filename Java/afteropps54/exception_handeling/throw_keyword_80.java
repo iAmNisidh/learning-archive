@@ -4,7 +4,7 @@ public class throw_keyword_80
  {
     public static void main(String[] args) {
         int i = 0;
-        int j= 0 ;
+        int j ;
          
         try{
             j = 14/i; 

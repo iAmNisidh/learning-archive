@@ -1,0 +1,58 @@
+      maven -> build automation tool,manages dependcies 
+
+pom -> project obj model information about the project 
+
+in spring boot we externalize the creation of obj 
+
+IOC -> inversion of control 
+ 
+ioc container me nhot sare obj hote hai jzab hame chaiye hota hai ham use mang ,lete hai 
+
+Application context -> is a way to implement IOC container 
+
+agar kisi class kee upar @compomnent mil jaega to  IOC container usko apne andar rakh lega 
+
+annotation provides the information about class, interface, method, field, function 
+
+annotation can be written over class ,interface, method ,field ,function 
+
+@component mtlb hame is class ko ioc container me rakhana hai 
+
+@component class is automatically rehistered as Spring bean 
+
+in the language of spring obj is called as bean 
+
+ioc container wo sirf wahi classes koo aone andar rakhta hai jo ki beans hoti hai or beans banana ke liye @comp likhna hoga mtb kisi bhi class ko bean banana ke liye annotate karna hoga @comp se 
+
+@SpringBootApplication annotation ham sirf main class pe hi lagate hai 
+
+puri project me ye sirf 1 hi jagha pe hofi or ye sirf main class pe lagate hai
+
+@restController bean hi banata hai  
+
+@SpringBootApplication does three work 
+1. @Configration 
+2. @EnableAutoConfigration
+
+
+
+
+
+
+3. @ComponentScan 
+-> khojta hai aisa class jispe @component likha ho 
+
+what is dependency(feild) injection?
+-> @Autowired 
+   private Dog dog
+
+car dog class pe depend kar ra hai
+
+jab bhi kisi or class ko use karna hoga kisi or class me usko as a feild likh dege or uske upper autowired laga dege 
+ 
+
+
+  
+
+
+

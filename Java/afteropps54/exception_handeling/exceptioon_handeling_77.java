@@ -1,7 +1,7 @@
 package exception_handeling;
 
 public class exceptioon_handeling_77 {
-    public static void main(String[] args) {
+    public static void main(String[] args) {                                                                                                                                                                                                                                                
         int i = 7;
         int j= 0 ;
         
@@ -18,3 +18,4 @@ public class exceptioon_handeling_77 {
     }
     
 }
+// catch block will be executed only in case of exception

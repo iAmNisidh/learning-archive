@@ -1,0 +1,14 @@
+D:\language\C#\AdvancedDemo\bin\Debug\net9.0\AdvancedDemo.exe
+D:\language\C#\AdvancedDemo\bin\Debug\net9.0\AdvancedDemo.deps.json
+D:\language\C#\AdvancedDemo\bin\Debug\net9.0\AdvancedDemo.runtimeconfig.json
+D:\language\C#\AdvancedDemo\bin\Debug\net9.0\AdvancedDemo.dll
+D:\language\C#\AdvancedDemo\bin\Debug\net9.0\AdvancedDemo.pdb
+D:\language\C#\AdvancedDemo\obj\Debug\net9.0\AdvancedDemo.GeneratedMSBuildEditorConfig.editorconfig
+D:\language\C#\AdvancedDemo\obj\Debug\net9.0\AdvancedDemo.AssemblyInfoInputs.cache
+D:\language\C#\AdvancedDemo\obj\Debug\net9.0\AdvancedDemo.AssemblyInfo.cs
+D:\language\C#\AdvancedDemo\obj\Debug\net9.0\AdvancedDemo.csproj.CoreCompileInputs.cache
+D:\language\C#\AdvancedDemo\obj\Debug\net9.0\AdvancedDemo.dll
+D:\language\C#\AdvancedDemo\obj\Debug\net9.0\refint\AdvancedDemo.dll
+D:\language\C#\AdvancedDemo\obj\Debug\net9.0\AdvancedDemo.pdb
+D:\language\C#\AdvancedDemo\obj\Debug\net9.0\AdvancedDemo.genruntimeconfig.cache
+D:\language\C#\AdvancedDemo\obj\Debug\net9.0\ref\AdvancedDemo.dll

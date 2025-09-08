@@ -1,0 +1,152 @@
+Servlet is a Server-Side Technology which is used to handle the client request, process the request
+and generate the dynamic response.
+
+A server is a software or hardware device that accepts and responds to requests
+made over a network by the client
+
+there are two type of server:
+1. web server 
+2. application server    
+            
+servlet is a predefined interface (it defines servlet lifecycle method)
+Generic Servlet is a predefined class inherit servlet (we use it when we want protocal independent servlet, no  need  )
+HTTP Servlet(class) inherit GenericServlet (if we need request responce obj then we use http servlet )
+
+The GET method is used to retrieve information
+1. GET .
+from the given server using a given URI.
+Requests using GET should only retrieve data
+and should have no other effect on the data.
+Same as GET, but transfers the status line and
+2. HEAD .
+header section only.
+3. POST :-
+A POST request is used to send data to the
+server, for example, customer information,
+file upload, etc. using HTML forms.
+4. PUT :- Replaces all current representations of the
+target resource with the uploaded content.
+. DELETE :- Removes all current representations of the
+target resource given by a URI.
+
+we have to create a deployment descriptor 
+
+servlet lifecycle :-
+1. loading and instantiation
+-> when server is started servlet class is loaded in the memory & obj is created
+2. initialisation:-
+-> init method will be called and servlet obj will be initialised by invoking init()
+3. request handling:-
+-> service method will be invoked it will handle the client request in this phase service method will be invoked
+* jab bhi client ke side se request create hogi to threads create honge 
+4. destroy:-
+->when the server is shut down it creates destroy() it  will be executed and servlet obj will be deleted 
+
+web.xml me servlet mapping provide karte hai web.xml decide karta hai jo bhi client requet send kar rra hai us request ke accoding kon sa servlet execute karwana hai 
+
+syntax of web.xml 
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+                             http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+         version="3.0">
+
+    <!-- Servlet Definition -->
+    <servlet>
+        <servlet-name>MyServlet</servlet-name>
+        <servlet-class>in.sp.backend.MyServlet</servlet-class>
+    </servlet>
+
+    <!-- Servlet Mapping -->
+    <servlet-mapping>
+        <servlet-name>MyServlet</servlet-name>
+        <url-pattern>/myServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- Welcome Page -->
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+    </welcome-file-list>
+
+</web-app>
+
+web.xml file is in WEB-INF
+
+
+Different tasks of web.xml file :-
+1. Servlet Configuration
+2. JSP File Configuration
+3. Filters Configurations
+4. Listeners Configurations
+5. Error Page Configuration
+6. Welcome File Configuration
+
+Annotations i.e. @WebServlet, @WebFilter, @WebListener, @MultipartConfig etc
+are part of the Java Servlet API and can be used in any version from servlet 3.0
+onwards, including newer versions like 3.1, 4.0, and 5.0f
+
+HttpServletRequest HttpServletResponce are interfaces  
+
+Methods of HttpServletRequest:-
+-> getParameter(String name): Returns the value of the request parameter specified by the name.
+-> getCookies(): Returns an array of Cookie objects representing the cookies included in the request.
+-> getSession(boolean create): Returns the current session associated with the request or creates a
+new one if create is true.
+getMethod(): Returns the HTTP method of the request, such as GET, POST, PUT, DELETE, etc.
+-> getAttribute(String name): Retums the value of the named attribute as an Object.
+-> setAttribute(String name, Object value): Binds an object to a given attribute name in the request
+scope.
+-> getHeader(String name): Returns the value of the specified HTTP header.
+-> getHeaderNames(): Returns an enumeration of all the header names sent with the request.
+
+Methods of HttpServletResponse
+-> getWriter(): Returns a PrintWriter object that can be used to send character text to the client.
+-> setContentType(String type): Sets the MIME type of the response.
+-> setContentLength(int len): Sets the length of the content being returned in the response.
+-> sendRedirect(String location): Redirects the client to a different URL.
+-> sendError(int sc, String msg): Sends an error response to the client with the specified status
+code and message.
+-> addCookie(Cookie cookie): Adds a cookie to the response.
+-> setStatus(int sc): Sets the status code of the response.
+-> setHeader(String name, String value): Sets the value of the specified response header.
+-> addHeader(String name, String value): Adds a response header with the given name and value
+
+Commonly used HTTP Methods are :-
+1. POST
+2. GET
+3. PUT
+4. PATCH
+5. DELETE
+
+HTTP methods define the specific actions that can be performed on the resources like
+Java or Servlet file, Image file, Document file etc
+
+GET method sends data through the resource URL and thus it is not secured...
+GET is slightly faster because the
+values are sent in the header
+We can send very less d ata in case of
+i GET request because it adds the data
+to the URL and the length of a URL is
+limited (maximum URL length is
+2048 characters)
+POST method sends data through the HTTP message body and thus it is more secured...
+POST is slightly slow because the
+values are sent in the request body,
+in the format that the content type
+specifies.
+We can send huge amount of data in
+case of POST request, there is no
+restriction
+
+-> sendRedirect() method is used to redirect the response to another resource (ie. to servlet
+or JSP or html etc)
+-> It is the method of HttpServletResponse
+
+send direct method will change the url
+
+request dispatcher is an interface  didn change the url 
+
+
+
+               

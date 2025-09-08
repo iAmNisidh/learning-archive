@@ -1,0 +1,80 @@
+1️⃣ Directive Tag
+JSP ko instructions dene ke liye.
+
+Syntax: <%@ ... %>
+
+Types:
+
+page: page settings ke liye
+
+include: file include karne ke liye
+
+taglib: custom tag libraries ke liye
+
+JSP Directives – 3 Types
+1️⃣ Page Directive
+
+Page ki properties set karta hai.
+
+Example: language, contentType, errorPage, etc.
+
+Syntax: <%@ page attribute="value" %>
+
+2️⃣ Include Directive
+
+Ek JSP file ko doosri JSP file me include karta hai (compile time pe).
+
+Syntax: <%@ include file="filename.jsp" %>
+
+3️⃣ Taglib Directive
+
+Custom tag libraries ko declare karta hai.
+
+Syntax: <%@ taglib uri="uri" prefix="prefix" %>
+
+
+
+2️⃣ Scriptlet Tag
+Java code likhne ke liye.
+
+Syntax: <% code %>
+
+3️⃣ Expression Tag
+Output dikhane ke liye.
+
+Syntax: <%= expression %>
+
+4️⃣ Declaration Tag
+Variable ya method banane ke liye.
+
+Syntax: <%! declaration %>
+
+5️⃣ Action Tag
+Kaam karne ke liye (jaise include, forward).
+
+Examples:
+
+<jsp:include page="..." />
+
+<jsp:forward page="..." />
+
+<jsp:param name="..." value="..." />
+
+6️⃣ Comment Tag
+Code me comment likhne ke liye (browser me nahi dikhega).
+
+Syntax: <%-- comment --%>
+
+Buit in Object (can be used in Script let and Expression)
+request (HttServletRequest)
+response (HttpServletResponse)
+pageContext (PageContext)
+out (JspWriter) PrintWriter object
+session (HttpSession)
+application (ServletContext)
+config (ServletConfig)
+
+
+
+
+

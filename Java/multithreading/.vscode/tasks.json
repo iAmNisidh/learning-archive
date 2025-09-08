@@ -1,0 +1,22 @@
+{
+    // See https://code.visualstudio.com/docs/editor/tasks for more information
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build Java",
+            "type": "shell",
+            "command": "javac HelloWorld.java",
+            "group": "build",
+            "problemMatcher": [
+                "$javac"
+            ]
+        },
+        {
+            "label": "Run Java",
+            "type": "shell",
+            "command": "java HelloWorld",
+            "group": "test",
+            "dependsOn": "Build Java"
+        }
+    ]
+}
